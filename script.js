@@ -28,4 +28,14 @@ rollDiceBtn.addEventListener("click", () => {
     ? "Congratulations! You rolled a 6. Your purchase is FREE!"
     : `You rolled a ${diceRoll}. Better luck next time!`;
 });
-    
+    // Dice Roll Functionality
+const rollDiceButton = document.getElementById("roll-dice");
+const diceResult = document.getElementById("dice-result");
+
+rollDiceButton.addEventListener("click", () => {
+  const diceValue = Math.floor(Math.random() * 6) + 1;
+  diceResult.textContent =
+    diceValue === 6
+      ? "Congratulations! You rolled a 6. Your purchase is FREE!"
+      : `You rolled a ${diceValue}. Better luck next time!`;
+});
